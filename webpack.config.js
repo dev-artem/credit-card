@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index.tsx',
-    mode: 'development',
+    mode: 'production',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
@@ -19,8 +19,8 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.less$/,
-                use: ['style-loader', 'css-loader', 'less-loader'],
+                test: /\.s[ac]ss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
         ],
     },

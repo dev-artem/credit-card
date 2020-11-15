@@ -1,0 +1,67 @@
+@mixin input($width) {
+    width: $width;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.wrap {
+    padding-top: 100px;
+}
+.card {
+    width: 600px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #191970;
+    background: #87cefa;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card__group {
+    margin: 10px 0;
+}
+
+.card__number {
+    @include input(100%);
+}
+
+.card__date {
+    @include input(20%);
+}
+
+.card__cvv {
+    @include input(10%);
+}
+
+.card__submit {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.card__invalid {
+    color: red;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.card__submit {
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4682b4;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.info {
+    margin-top: 50px;
+}
